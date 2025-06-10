@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Factura Cliente</title>
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body>
+  <div class="container">
+    <button onclick="window.history.back()" class="backButton">Volver</button>
+    <h1>Factura</h1>
+
+    <label for="order-select"><strong>Selecciona un pedido:</strong></label><br>
+    <select id="order-select" style="margin-bottom: 20px;">
+      <option value="">-- Selecciona un pedido --</option>
+    </select>
+    
+    <div id="invoice-content">
+      <!-- Aquí se cargará la info del cliente -->
+    </div>
+
+
+    <br>
+    <button id="download-pdf" class="pdfButton">Descargar Factura PDF</button>
+  </div>
+
+  <!-- Librerías necesarias -->
+<script src="https://cdn.jsdelivr.net/npm/dompurify@2.4.0/dist/purify.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+<!-- Tu script de generación de factura -->
+  <script src="../js/invoice.js"></script>
+<style>
+  #invoice-content {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 13px;
+    color: #333;
+    background: #fff;
+    padding: 30px 40px;
+    max-width: 800px;
+    margin: 30px auto;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  #invoice-content input{
+    width: 20%;
+  }
+  #invoice-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+
+  #invoice-header h1 {
+    font-size: 24px;
+    margin: 0;
+  }
+
+  .company-info,
+  .client-info {
+    font-size: 12px;
+    line-height: 1.4;
+  }
+
+  .section-title {
+    font-size: 16px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 4px;
+  }
+
+  .info-group p {
+    margin: 2px 0;
+  }
+
+  .work-details {
+    margin-top: 20px;
+  }
+
+  table.invoice-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    font-size: 12px;
+  }
+
+  table.invoice-table th,
+  table.invoice-table td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+  }
+
+  table.invoice-table th {
+    background-color: #f5f5f5;
+  }
+
+  #price-section {
+    margin-top: 30px;
+    font-size: 13px;
+  }
+
+  #price-section select,
+  #price-section input {
+    padding: 6px;
+    font-size: 12px;
+    margin-top: 5px;
+  }
+
+  .price-input-container input{
+    padding: 6px;
+    font-size: 12px;
+    margin-top: 5px;
+  }
+  #total-amount {
+    margin-top: 15px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #111;
+  }
+
+  #downloadInvoiceBtn {
+    display: block;
+    margin: 30px auto 0;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+
+  #downloadInvoiceBtn:hover {
+    background-color: #0056b3;
+  }
+</style>
+</body>
+</html>

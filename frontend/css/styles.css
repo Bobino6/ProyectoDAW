@@ -1,0 +1,371 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f2eedc;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 800px;
+  margin: 2rem auto;
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+}
+
+/* LOGIN page */
+.login-container{
+  margin-top: 350px;
+  max-width: 550px;
+  margin: 4rem auto;
+  background: rgb(112, 167, 235);
+  padding: 2rem;
+  border-radius: 8px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: rgb(11, 5, 5);
+}
+
+
+
+.login-form{
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.login-form button{
+  background-color:#374151;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+
+.logout{
+  width: 120px;
+
+  background-color:#374151;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+
+.logout a {
+  color: white;
+  text-decoration: none
+}
+
+
+/* Clientes page  */
+
+.list-header{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h1 {
+  margin-bottom: 1rem;
+}
+
+input, button {
+  display: block;
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 0.75rem;
+  text-align: left;
+}
+
+a {
+  text-decoration: none;
+  color: #007bff;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+
+/* Estilos del modal agregar cliente*/
+
+.addClient{
+  width: 17%;
+  cursor: pointer;
+
+  background-color:#374151;
+  color: white;
+  border: none;
+
+  font-size: 14px;
+}
+
+.backButton{
+  width: 15%;
+  cursor: pointer;
+
+  background-color:#374151;
+  color: white;
+  border: none;
+  font-size: 17px;
+}
+
+.invoiceButton{
+  cursor: pointer;
+  width: 15%;
+
+  background-color:#374151;
+  color: white;
+  border: none;
+  font-size: 17px;
+}
+
+#client-form input{
+  width: 250px;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal.hidden {
+  display: none;
+}
+
+.modal-content {
+  background-color: rgb(112, 167, 235);
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content button{
+  width: 120px;
+
+  background-color:#374151;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+.modal-content h2 {
+  margin-top: 0;
+}
+
+.modal-content .close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* Detail page formulario */
+
+.details-buttons{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  
+}
+
+.form-container {
+  max-width: 480px;
+  margin: 10px;
+  padding: 2rem;
+  background-color: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.form-container label {
+  font-weight: 500;
+  color: #374151;
+}
+
+.form-input {
+  padding: 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.2s;
+}
+
+.form-input:focus {
+  border-color: #6366f1;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+.submit-button {
+  padding: 0.75rem 1.25rem;
+  background-color:#374151;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 17px;
+
+}
+
+.submit-button:hover {
+  background-color: #333d4e;
+}
+
+
+
+ select {
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      background-color: #f9f9f9;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      padding: 0.75rem 2.5rem 0.75rem 1rem;
+      font-size: 1rem;
+      color: #333;
+      cursor: pointer;
+      width: 100%;
+      max-width: 400px;
+      box-sizing: border-box;
+      margin-bottom: 1rem;
+      transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    select:hover {
+      border-color: #999;
+    }
+
+
+    input {
+      padding: 0.75rem 2.5rem 0.75rem 1rem;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f9f9f9;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    
+@media (max-width: 500px) {
+  .form-container {
+    margin: 1rem;
+    padding: 1.5rem;
+  }
+
+  .submit-button {
+    font-size: 0.95rem;
+    padding: 0.65rem 1rem;
+  }
+}
+
+/* Invoice page */
+
+#invoice-content {
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin-top: 20px;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.pdfButton{
+  padding: 0.75rem 1.25rem;
+  background-color:#374151;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 17px;
+  width: 150px;
+}
+.delete-order-btn{
+  cursor: pointer;
+  width: 50%;
+  background-color: #f24a1c;
+}
+
+
+/* clientDetail */
+.editOrderForm input{
+  width: 240px
+}
+
+.editOrderButton{
+  padding: 0.75rem 1.25rem;
+  background-color:#374151;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 17px;
+  width: 150px;
+}
+
+.delete-button{
+  padding: 0.75rem 1rem;
+  background-color:#f24a1c;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  width: 250px;
+}
+
+.pedidoInfo{
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+
+.comentarioInput{
+  width: 320px;
+}
+
+.saveButton{
+  padding: 0.75rem 1.25rem;
+  background-color:#374151;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 17px;
+  width: 150px;
+}

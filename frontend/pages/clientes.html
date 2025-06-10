@@ -1,0 +1,56 @@
+<!-- public/pages/clients.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Clientes</title>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+  <div><button class="logout"><a href="login.html">Cerrar sesión</a></button></div>
+  <div class="container">
+    <h1>Clientes</h1>
+    <!-- 🆕 Botón para mostrar modal de registro de nuevo cliente-->
+     <div class="list-header">
+      <button id="open-modal-btn" class="addClient">Añadir Cliente</button>
+    <!-- Buscador de clientes -->
+      <input
+        type="text"
+        id="search-input"
+        placeholder="Buscar por nombre, empresa o email"
+        style="margin: 10px 0; padding: 6px; width: 100%; max-width: 300px;"
+      />
+     </div>
+    
+    <!-- Modal oculto -->
+    <div id="modal" class="modal hidden">
+      <div class="modal-content">
+        <span id="close-modal-btn" class="close">&times;</span>
+        <h2>Nuevo Cliente</h2>
+        <form id="client-form">
+          <input type="text" id="name" placeholder="Nombre" required>
+          <input type="email" id="email" placeholder="Email" required>
+          <input type="text" id="company" placeholder="Empresa">
+          <input type="text" id="address" placeholder="Dirección">
+          <input type="text" id="phone" placeholder="Teléfono">
+          <button type="submit">Guardar</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Tabla de clientes -->
+    <table>
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Email</th>
+          <th>Empresa</th>
+        </tr>
+      </thead>
+      <tbody id="clients-table-body"></tbody>
+    </table>
+  </div>
+
+  <script src="../js/clients.js"></script>
+</body>
+</html>
