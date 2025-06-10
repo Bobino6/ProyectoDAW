@@ -65,6 +65,11 @@ document.addEventListener('DOMContentLoaded', async () => {
         option.value = emp._id;
         option.textContent = emp.name;
         select.appendChild(option);
+      });
+      empleados.forEach(emp => {
+        const option = document.createElement('option');
+        option.value = emp._id;
+        option.textContent = emp.name;
         editSelect.appendChild(option);
       });
     } catch (error) {
