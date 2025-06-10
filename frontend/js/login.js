@@ -19,7 +19,7 @@ const form = document.getElementById('login-form');
         localStorage.setItem("EmployeeId", data.id);
         localStorage.setItem("EmployeeName", data.name);
         // Redirigir a clients.html
-        window.location.href = 'file:///C:/Users/Migue/Desktop/Proyecto-Edu/frontend/pages/clientes.html';
+        window.location.href = 'D:/Proyecto-Edu-app/frontend/pages/clientes.html';
       } else {
         alert('Correo o contraseña incorrectos.');
       }
