@@ -13,7 +13,7 @@ node server.js
 
 
 Para lanzar el front:
-Ejecutar el archivo index.html en explorador
+Ejecutar el archivo login.html en explorador
 
 Para lanzar el backend:
 entrar en carpeta 'backend' y ejecutar 'npm run dev':
